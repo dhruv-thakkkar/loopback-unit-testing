@@ -74,11 +74,11 @@ describe('UserController', () => {
       .expect(404);
   });
 
-  it('invokes GET /users/{id} 200', async () => {
+  it('invokes DELETE /users/{id} 200', async () => {
     await client.del('/users/' + userId).expect(200);
   });
 
-  it('invokes GET /users/{id} 404', async () => {
+  it('invokes DELETE /users/{id} 404', async () => {
     await client.del('/users/' + someWrongUserId).expect(200);
   });
 });
